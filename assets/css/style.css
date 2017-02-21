@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700");
+body {
+  height: 200vh; }
+
+.main-container {
+  font-family: 'Source Code Pro', sans-serif;
+  font-weight: 300; }
+
+.name-container {
+  width: 100vw;
+  height: 80vh;
+  background: linear-gradient(45deg, #6bb9f0 30%, #3498db 60%, #2980b9 90%); }
+
+.name-wrap, .name, .name-wrap {
+  position: absolute; }
+
+.name-wrap {
+  margin: 0 auto;
+  top: 35%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #FFF;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  width: 12em;
+  height: 4em;
+  transition: all 0.3s ease;
+  color: #fff; }
+
+.name-wrap:hover {
+  width: 80vw;
+  padding-bottom: 6.5em; }
+  .name-wrap:hover .name {
+    font-size: 1.3em;
+    transform: translateY(-10px); }
+  .name-wrap:hover .name-desc {
+    opacity: 1;
+    transform: translateY(50px); }
+
+.name, .name-desc {
+  width: 100%;
+  height: 4em;
+  transition: all 0.2s ease-in-out;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 3px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 4em; }
+
+.name-desc {
+  line-height: 1em;
+  font-style: italic; }
+
+.name-desc {
+  opacity: 0; }
+
+#parallax-img {
+  position: fixed;
+  top: 0%;
+  z-index: -1; }
+  #parallax-img img {
+    width: 100vw; }
+
+@media screen and (min-width: 1200px) {
+  .name-wrap:hover {
+    width: 27vw; } }
+
+.contact-container {
+  width: 100vw;
+  height: 40vh;
+  background-color: #fff; }
+
+.contact-wrap {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: normal; }
+
+nav {
+  z-index: 999;
+  width: 100%;
+  position: fixed;
+  background: #000;
+  min-height: 4em;
+  opacity: 0.8; }
+
+#menu {
+  padding: 0;
+  margin: 0; }
+  #menu i {
+    padding: 0 0.8em; }
+  #menu a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 3px;
+    height: 100%; }
+
+#burger {
+  display: block;
+  color: #FFF;
+  margin: 0;
+  padding: 0.8em;
+  font-size: 1.5em;
+  float: right; }
+
+.bar ul {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  top: 3em;
+  right: 0;
+  background: #000;
+  transition: all 0.4s ease; }
+
+.show ul {
+  opacity: 1; }
+
+@media screen and (min-width: 1200px) {
+  .bar ul {
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: static;
+    height: 100%; }
+  #burger {
+    display: none; } }
+
+.project-container {
+  margin-top: 20em;
+  background-color: #fff;
+  width: 100vw;
+  height: 60vh; }
+
+.project-title {
+  padding-top: 3.5em;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: normal; }
+
+.notion-project {
+  text-align: center; }
