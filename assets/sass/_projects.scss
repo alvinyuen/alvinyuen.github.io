@@ -8,11 +8,28 @@
 
 .project-title {
   padding-top: 3.5em;
+  padding-bottom: 0.5em;
   text-align: center;
   font-size: 1.3em;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: bold;
+}
+
+.project-container:hover {
+  .project-title-slider {
+    width: 10%;
+  }
+}
+
+.project-title-slider {
+    background-color: #fff;
+    width: 0;
+    transition: width 1s ease;
+    height: 2px;
+    display: block;
+    transition: width 0.5s ease-in-out;
+    margin: 0 auto;
 }
 
 .project {
@@ -25,12 +42,13 @@
 
 .projects-title {
   font-weight: 700;
-  margin-top: 2em;
+  margin-top: 1em;
 
 }
 
 .project-img {
   width: 90vw;
+  margin-top:1em;
 
 }
 

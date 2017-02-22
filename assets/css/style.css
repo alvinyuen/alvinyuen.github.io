@@ -85,7 +85,8 @@ body {
   width: 12em;
   height: 4em;
   transition: all 0.3s ease;
-  color: #fff; }
+  color: #fff;
+  font-size: 1.2em; }
 
 .name-wrap:hover {
   width: 80vw;
@@ -95,7 +96,7 @@ body {
     transform: translateY(-10px); }
   .name-wrap:hover .name-desc {
     opacity: 1;
-    transform: translateY(50px); }
+    transform: translateY(3.7em); }
 
 .name, .name-desc {
   width: 100%;
@@ -125,7 +126,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .name-wrap:hover {
-    width: 27vw; } }
+    width: 28vw; } }
 
 .about-container {
   margin-top: 20em;
@@ -136,11 +137,24 @@ body {
 
 .about-title {
   padding-top: 8em;
+  padding-bottom: 0.5em;
   text-align: center;
   font-size: 1.3em;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: bold; }
+
+.about-container:hover .about-title-slider {
+  width: 30%; }
+
+.about-title-slider {
+  background-color: #000;
+  width: 0;
+  transition: width 1s ease;
+  height: 2px;
+  display: block;
+  transition: width 0.5s ease-in-out;
+  margin: 0 auto; }
 
 .about-wrap {
   font-size: 0.8em;
@@ -174,11 +188,24 @@ body {
 
 .project-title {
   padding-top: 3.5em;
+  padding-bottom: 0.5em;
   text-align: center;
   font-size: 1.3em;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: bold; }
+
+.project-container:hover .project-title-slider {
+  width: 10%; }
+
+.project-title-slider {
+  background-color: #fff;
+  width: 0;
+  transition: width 1s ease;
+  height: 2px;
+  display: block;
+  transition: width 0.5s ease-in-out;
+  margin: 0 auto; }
 
 .project {
   text-align: center;
@@ -189,10 +216,11 @@ body {
 
 .projects-title {
   font-weight: 700;
-  margin-top: 2em; }
+  margin-top: 1em; }
 
 .project-img {
-  width: 90vw; }
+  width: 90vw;
+  margin-top: 1em; }
 
 @media screen and (min-width: 1200px) {
   .project-img {
@@ -200,7 +228,7 @@ body {
 
 .contact-container {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-color: #fff;
   color: #000;
   padding-top: 2em; }
@@ -212,10 +240,22 @@ body {
 
 .contact-title {
   text-align: center;
+  padding-bottom: 0.5em;
   font-size: 1.3em;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: bold; }
+
+.contact-container:hover .contact-title-slider {
+  width: 10%; }
+
+.contact-title-slider {
+  background-color: #000;
+  width: 0;
+  height: 2px;
+  display: block;
+  transition: width 0.5s ease-in-out;
+  margin: 0 auto; }
 
 .contact-email-head {
   margin-top: 1em; }
@@ -247,5 +287,5 @@ body {
     color: #fff; }
 
 .contact-footer-desc {
-  margin-top: 6em;
+  margin-top: 12em;
   font-size: 0.8em; }

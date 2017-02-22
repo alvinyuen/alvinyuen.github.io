@@ -30,6 +30,7 @@ body {
   height: 4em;
   transition: all 0.3s ease;
   color: #fff;
+  font-size: 1.2em;
 }
 
 .name-wrap:hover {
@@ -41,7 +42,7 @@ body {
   }
   .name-desc {
     opacity: 1;
-     transform: translateY(50px);
+     transform: translateY(3.7em);
   }
 }
 
@@ -79,7 +80,7 @@ body {
 
 @media screen and (min-width: $break-large) {
     .name-wrap:hover {
-      width: 27vw;
+      width: 28vw;
     }
 }
 

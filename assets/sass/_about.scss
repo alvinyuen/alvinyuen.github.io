@@ -9,11 +9,28 @@
 
 .about-title {
   padding-top: 8em;
+  padding-bottom: 0.5em;
   text-align: center;
   font-size: 1.3em;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: bold;
+}
+
+.about-container:hover {
+  .about-title-slider {
+    width: 30%;
+  }
+}
+
+.about-title-slider {
+    background-color: #000;
+    width: 0;
+    transition: width 1s ease;
+    height: 2px;
+    display: block;
+    transition: width 0.5s ease-in-out;
+    margin: 0 auto;
 }
 
 .about-wrap {
