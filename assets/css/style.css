@@ -310,15 +310,15 @@ body {
 
 .contact-links {
   text-align: center;
-  font-size: 2.5em;
-  margin-top: 4em;
+  font-size: 1.8em;
+  margin-top: 3em;
   color: #000; }
   .contact-links a {
     color: #000;
     border-radius: 50%;
     border: 1px solid black;
     padding: 0.25em 0.55em;
-    margin: 0.25em; }
+    margin: 0.1em; }
   .contact-links #contact-linkedin:hover {
     background-color: #2E9BDA;
     color: #fff;
