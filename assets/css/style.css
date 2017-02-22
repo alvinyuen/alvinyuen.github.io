@@ -1,5 +1,63 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700");
+nav {
+  z-index: 999;
+  width: 100%;
+  position: fixed;
+  background: #000;
+  min-height: 4em;
+  opacity: 0.8; }
+
+#menu {
+  padding: 0;
+  margin: 0;
+  width: 100vw; }
+  #menu i {
+    padding: 0 0.8em; }
+  #menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 3px;
+    height: 100%; }
+
+#burger {
+  display: block;
+  color: #fff;
+  margin: 0;
+  padding: 0.8em;
+  font-size: 1.5em;
+  float: right; }
+
+.bar ul {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  top: 3em;
+  right: 0;
+  background: #000;
+  transition: all 0.4s ease; }
+
+.show ul {
+  opacity: 1; }
+
+@media screen and (min-width: 1200px) {
+  .bar ul {
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: static;
+    height: 100%; }
+  #burger {
+    display: none; } }
+
 body {
   height: 200vh; }
 
@@ -8,9 +66,9 @@ body {
   font-weight: 300; }
 
 .name-container {
-  width: 100vw;
-  height: 80vh;
-  background: linear-gradient(45deg, #6bb9f0 30%, #3498db 60%, #2980b9 90%); }
+  width: 100%;
+  height: 85vh;
+  background: linear-gradient(90deg, #6bb9f0 40%, #3498db 60%, #2980b9 90%); }
 
 .name-wrap, .name, .name-wrap {
   position: absolute; }
@@ -69,83 +127,125 @@ body {
   .name-wrap:hover {
     width: 27vw; } }
 
-.contact-container {
-  width: 100vw;
-  height: 40vh;
-  background-color: #fff; }
-
-.contact-wrap {
-  text-align: center;
-  font-size: 1.3em;
-  font-weight: normal; }
-
-nav {
-  z-index: 999;
-  width: 100%;
-  position: fixed;
-  background: #000;
-  min-height: 4em;
-  opacity: 0.8; }
-
-#menu {
-  padding: 0;
-  margin: 0; }
-  #menu i {
-    padding: 0 0.8em; }
-  #menu a {
-    color: #FFF;
-    text-decoration: none;
-    padding: 1.5em;
-    display: inline-block;
-    vertical-align: middle;
-    text-transform: uppercase;
-    font-size: 1em;
-    letter-spacing: 3px;
-    height: 100%; }
-
-#burger {
-  display: block;
-  color: #FFF;
-  margin: 0;
-  padding: 0.8em;
-  font-size: 1.5em;
-  float: right; }
-
-.bar ul {
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  position: absolute;
-  top: 3em;
-  right: 0;
-  background: #000;
-  transition: all 0.4s ease; }
-
-.show ul {
-  opacity: 1; }
-
-@media screen and (min-width: 1200px) {
-  .bar ul {
-    opacity: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: static;
-    height: 100%; }
-  #burger {
-    display: none; } }
-
-.project-container {
+.about-container {
   margin-top: 20em;
   background-color: #fff;
-  width: 100vw;
-  height: 60vh; }
+  width: 100%;
+  height: 80vh;
+  color: #000; }
+
+.about-title {
+  padding-top: 8em;
+  text-align: center;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold; }
+
+.about-wrap {
+  font-size: 0.8em;
+  width: 90vw;
+  margin: 0 auto; }
+
+.about-desc {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 2em; }
+
+.about-skills-wrapper {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 2em;
+  letter-spacing: 0.5px; }
+
+.about-skill-level {
+  font-style: italic;
+  font-weight: 700;
+  color: #323a45; }
+
+@media screen and (min-width: 1200px) {
+  .about-wrap {
+    width: 50vw;
+    font-size: 1em; } }
+
+.project-container {
+  background-color: #323a45;
+  width: 100%;
+  height: 120vh;
+  color: #fff; }
 
 .project-title {
   padding-top: 3.5em;
   text-align: center;
   font-size: 1.3em;
-  font-weight: normal; }
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold; }
 
-.notion-project {
-  text-align: center; }
+.project {
+  text-align: center;
+  margin-top: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.75px; }
+
+.projects-title {
+  font-weight: 700;
+  margin-top: 2em; }
+
+.project-img {
+  width: 90vw; }
+
+@media screen and (min-width: 1200px) {
+  .project-img {
+    width: 30vw; } }
+
+.contact-container {
+  width: 100%;
+  height: 90vh;
+  background-color: #fff;
+  color: #000;
+  padding-top: 2em; }
+
+.contact-wrap {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin: 5em; }
+
+.contact-title {
+  text-align: center;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold; }
+
+.contact-email-head {
+  margin-top: 1em; }
+
+.contact-email {
+  margin-top: 0.5em; }
+
+.icon-wrap {
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 5em; }
+
+.contact-links {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 1em;
+  color: #000; }
+  .contact-links a {
+    color: #000;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 0.25em 0.5em; }
+  .contact-links #contact-linkedin:hover {
+    background-color: #2E9BDA;
+    color: #fff;
+    border: none; }
+  .contact-links #contact-github:hover {
+    background-color: #000;
+    color: #fff; }
+
+.contact-footer-desc {
+  margin-top: 6em;
+  font-size: 0.8em; }

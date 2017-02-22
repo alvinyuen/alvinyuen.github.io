@@ -14,10 +14,12 @@
   <link href="assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
   <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/aos/aos.css" rel="stylesheet" type="text/css">
 
   <script src="assets/jquery/jquery-3.1.1.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script src="assets/aos/aos.js"></script>
 
 </head>
 
@@ -27,7 +29,7 @@
   <nav>
     <div class="bar">
       <ul id="menu">
-        <a href="#resume"><i class="fa-file-text-o fa"></i>Resume</a>
+        <a href="#about"><i class="fa-file-text-o fa"></i>About</a>
         <a href="#projects" target="_blank"><i class="fa-laptop fa"></i>Projects</a>
         <a href="#contact"><i class="fa-address-book-o fa"></i>Contact</a>
       </ul>
@@ -39,7 +41,7 @@
   <div class="name-container">
     <div class="name-wrap">
       <div class="name"> Alvin Yuen </div>
-      <div class="name-desc"> Fullstack Software Developer </div>
+      <div class="name-desc"> Fullstack Web Developer </div>
     </div>
   </div>
 
@@ -47,21 +49,67 @@
     <img src="assets/img/hk.jpg" />
   </div>
 
+
+  <div id="about" class="about-container" >
+    <div class="about-wrap" data-aos="fade-right" data-aos-duration="2200">
+      <div class="about-title">About Me</div>
+
+
+      <div class="about-desc" >
+        I'm a Full-Stack developer residing in Hong Kong/Shanghai. The frontend technologies I am extensively proficient with include React, Sass, HTML5 and Redux. On the backend I work predominantly with PostgreSQL as my DBMS of choice and the Node/Express framework for creating and managing API routes. Whether it's implementing a design, levelling up in CodeWars, or building awesome software I always find ways to challenge myself and enhance my engineering skills.
+      </div>
+
+      <div class="about-skills-wrapper">
+        <div><span class="about-skill-level">Proficient :</span>  &nbsp;Javascript (ES6/ES5), Node, Express, React, Redux, PostgreSQL, Sass, WebSockets, Git</div>
+        <div><span class="about-skill-level">Knowledgeable :</span>  &nbsp;jQuery, Riot, Java, Spring Framework, Jooq</div>
+        <div><span class="about-skill-level">Some Experience :</span>  &nbsp;Elasticsearch, React Native, Hibernate, Nginx, Tomcat, Ubuntu</div>
+
+      </div>
+
+    </div>
+  </div>
+
+
   <div id="projects" class="project-container">
     <div class="project-wrap">
       <div class="project-title">Projects</div>
-      <div class="notion-project">
-        <img alt="notion-thumbnail" />
-        <div>
+
+
+      <div class="project" data-aos="fade-right" data-aos-duration="2200" >
+        <img class="project-img" src="assets/img/notion-1.png" alt="notion-thumbnail" />
+        <div class="projects-title">Notion</div>
+        <div class="project-desc">
         A brainstorming & collaboration platform
         </div>
+        <a href="https://github.com/halleycarleton/Notion" class="project-link">GitHub</a>
       </div>
+      <div class="project" data-aos="fade-right" data-aos-duration="2200"   >
+        <img class="project-img" src="assets/img/riotanalytics.png" alt="notion-thumbnail" />
+        <div class="projects-title">Riot Analytics</div>
+        <div class="project-desc">
+        Competitive Gamer Analyzer
+        </div>
+        <div class="project-link">GitHub</div>
+      </div>
+
     </div>
   </div>
 
   <div id="contact" class="contact-container">
       <div class="contact-wrap">
-        Contact
+        <div class="contact-title"> Contact </div>
+        <div class="contact-email-head">contact me @</div>
+        <div class="contact-email">alvinyuen628@gmail.com</div>
+
+        <div class="contact-links">
+
+          <a href="https://www.linkedin.com/in/shuchialvinyuen/" id="contact-linkedin"><i class="fa fa-linkedin-square"></i></a>
+
+          <a href="https://github.com/alvinyuen" id="contact-github"><i class="fa fa-github"></i></a>
+        </div>
+
+        <div class="contact-footer-desc">100% handcrafted by Alvin Yuen</div>
+
       </div>
   </div>
 
