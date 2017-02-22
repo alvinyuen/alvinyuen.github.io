@@ -1,0 +1,15 @@
+/* Mixins */
+
+@mixin flex ($dir:row, $wrap:wrap, $content: center, $items: center) {
+	display: flex;
+	flex-flow: $dir $wrap;
+	justify-content: $content;
+	align-items: $items;
+}
+
+@mixin bg-image($image-src) {
+	background-image: url($image-src);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}

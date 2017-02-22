@@ -1,11 +1,14 @@
+/* Font Imports */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700");
+/* Custom Colors */
+/* Mixins */
 nav {
   z-index: 999;
   width: 100%;
   position: fixed;
   background: #000;
-  min-height: 4em;
+  min-height: 4.7em;
   opacity: 0.8; }
 
 #menu {
@@ -13,7 +16,7 @@ nav {
   margin: 0;
   width: 100vw; }
   #menu i {
-    padding: 0 0.8em; }
+    padding: 0 0.8em 0 0; }
   #menu a {
     color: #fff;
     text-decoration: none;
@@ -24,7 +27,10 @@ nav {
     font-size: 1em;
     font-weight: 400;
     letter-spacing: 3px;
-    height: 100%; }
+    height: 100%;
+    transition: font-size 0.2s ease-in-out; }
+  #menu a:hover {
+    border-bottom: 3px solid #fff; }
 
 #burger {
   display: block;
@@ -68,7 +74,7 @@ body {
 .name-container {
   width: 100%;
   height: 85vh;
-  background: linear-gradient(90deg, #6bb9f0 40%, #3498db 60%, #2980b9 90%); }
+  background: linear-gradient(135deg, #6bb9f0 40%, #3498db 60%, #2980b9 90%); }
 
 .name-wrap, .name, .name-wrap {
   position: absolute; }
