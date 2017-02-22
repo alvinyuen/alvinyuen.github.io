@@ -11,6 +11,7 @@ body {
   width: 100%;
   height: 85vh;
   background: linear-gradient(135deg, #6bb9f0 40%,  #3498db 60%, #2980b9 90%);
+  // background-color: $matt-grey;
 }
 
 .name-wrap, .name, .name-wrap {
@@ -23,26 +24,26 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   transition: all 0.3s ease;
-  border-radius: 5px;
+  // border-radius: 5px;
   width: 12em;
   height: 4em;
   transition: all 0.3s ease;
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .name-wrap:hover {
   width: 80vw;
-  padding-bottom: 6.5em;
+  padding-bottom: 5.5em;
   .name {
-    font-size: 1.3em;
+    // font-size: 1.3em;
     transform: translateY(-10px);
   }
   .name-desc {
     opacity: 1;
-     transform: translateY(3.7em);
+     transform: translateY(4.8em);
   }
 }
 
@@ -50,17 +51,31 @@ body {
   width: 100%;
   height: 4em;
   transition: all 0.2s ease-in-out;
-  font-size: 1em;
   text-transform: uppercase;
-  color: #fff;
   letter-spacing: 3px;
   text-align: center;
   vertical-align: middle;
   line-height: 4em;
 }
 
+.name {
+  @include flex(row);
+}
+
 .name-desc {
-  line-height:1em;
+  font-size: 0.7em;
+}
+
+.first-name {
+  animation: fade-down 1.5s ease-out forwards;
+}
+
+.last-name {
+  animation: fade-up 1.5s ease-out forwards;
+}
+
+.name-desc {
+  line-height:0.7em;
   font-style: italic;
 }
 
@@ -79,9 +94,13 @@ body {
 
 
 @media screen and (min-width: $break-large) {
-    .name-wrap:hover {
-      width: 28vw;
+    .name-wrap {
+      font-size: 1.3em;
     }
+    .name-wrap:hover {
+      width: 25vw;
+    }
+
 }
 
 

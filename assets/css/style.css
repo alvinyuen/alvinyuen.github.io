@@ -3,12 +3,28 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700");
 /* Custom Colors */
 /* Mixins */
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
 nav {
   z-index: 999;
   width: 100%;
   position: fixed;
   background: #000;
-  min-height: 4.7em;
+  min-height: 4.8em;
   opacity: 0.8; }
 
 #menu {
@@ -28,7 +44,8 @@ nav {
     font-weight: 400;
     letter-spacing: 3px;
     height: 100%;
-    transition: font-size 0.2s ease-in-out; }
+    transition: font-size 0.2s ease-in-out;
+    border-bottom: 3px solid transparent; }
   #menu a:hover {
     border-bottom: 3px solid #fff; }
 
@@ -42,7 +59,9 @@ nav {
 
 .bar ul {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
   position: absolute;
   top: 3em;
@@ -57,7 +76,9 @@ nav {
   .bar ul {
     opacity: 1;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
     justify-content: center;
     position: static;
     height: 100%; }
@@ -85,39 +106,50 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   transition: all 0.3s ease;
-  border-radius: 5px;
   width: 12em;
   height: 4em;
   transition: all 0.3s ease;
   color: #fff;
-  font-size: 1.2em; }
+  font-size: 1em; }
 
 .name-wrap:hover {
   width: 80vw;
-  padding-bottom: 6.5em; }
+  padding-bottom: 5.5em; }
   .name-wrap:hover .name {
-    font-size: 1.3em;
     transform: translateY(-10px); }
   .name-wrap:hover .name-desc {
     opacity: 1;
-    transform: translateY(3.7em); }
+    transform: translateY(4.8em); }
 
 .name, .name-desc {
   width: 100%;
   height: 4em;
   transition: all 0.2s ease-in-out;
-  font-size: 1em;
   text-transform: uppercase;
-  color: #fff;
   letter-spacing: 3px;
   text-align: center;
   vertical-align: middle;
   line-height: 4em; }
 
+.name {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; }
+
 .name-desc {
-  line-height: 1em;
+  font-size: 0.7em; }
+
+.first-name {
+  animation: fade-down 1.5s ease-out forwards; }
+
+.last-name {
+  animation: fade-up 1.5s ease-out forwards; }
+
+.name-desc {
+  line-height: 0.7em;
   font-style: italic; }
 
 .name-desc {
@@ -131,11 +163,13 @@ body {
     width: 100vw; }
 
 @media screen and (min-width: 1200px) {
+  .name-wrap {
+    font-size: 1.3em; }
   .name-wrap:hover {
-    width: 28vw; } }
+    width: 25vw; } }
 
 .about-container {
-  margin-top: 20em;
+  margin-top: 26em;
   background-color: #fff;
   width: 100%;
   height: 80vh;
@@ -189,11 +223,11 @@ body {
 .project-container {
   background-color: #323a45;
   width: 100%;
-  height: 120vh;
+  height: 160vh;
   color: #fff; }
 
 .project-title {
-  padding-top: 3.5em;
+  padding-top: 4.5em;
   padding-bottom: 0.5em;
   text-align: center;
   font-size: 1.3em;
@@ -276,18 +310,19 @@ body {
 
 .contact-links {
   text-align: center;
-  font-size: 1.5em;
-  margin-top: 1em;
+  font-size: 2.5em;
+  margin-top: 4em;
   color: #000; }
   .contact-links a {
     color: #000;
     border-radius: 50%;
     border: 1px solid black;
-    padding: 0.25em 0.5em; }
+    padding: 0.25em 0.55em;
+    margin: 0.25em; }
   .contact-links #contact-linkedin:hover {
     background-color: #2E9BDA;
     color: #fff;
-    border: none; }
+    border: 1px solid transparent; }
   .contact-links #contact-github:hover {
     background-color: #000;
     color: #fff; }

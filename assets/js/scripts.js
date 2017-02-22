@@ -25,14 +25,16 @@ $(document).ready(() => {
   function render() {
     const charList = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ', '-', '_', '^', '+', '=', '%', '#', '@', '!', '~', '?'];
 
-    const decryptStr = 'Alvin Yuen';
+    const firstNameDecrypt = 'Alvin';
+    const lastNameDecrypt = ' Yuen';
     let time = new Date().getTime();
     let interval;
     let animation;
     function decrypt() {
       interval = (new Date().getTime() - time);
       if (interval >= 80) {
-        $('.name').text(genCipher(charList, decryptStr.length));
+        $('.first-name').text(genCipher(charList, firstNameDecrypt.length));
+        $('.last-name').text(genCipher(charList, firstNameDecrypt.length));
         time = new Date().getTime();
       }
       animation = window.requestAnimationFrame(decrypt);
@@ -40,7 +42,8 @@ $(document).ready(() => {
     animation = window.requestAnimationFrame(decrypt);
     setTimeout(() => {
       window.cancelAnimationFrame(animation);
-      $('.name').text(decryptStr);
+      $('.first-name').text(firstNameDecrypt);
+      $('.last-name').text(lastNameDecrypt);
     }, 2200);
   }
   render();
